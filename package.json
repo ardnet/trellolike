@@ -1,0 +1,11 @@
+{
+  "name": "trellolike",
+  "version": "1.0.0",
+  "description": " Trello Like App as part of Coding Assignment from Maltem.",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "author": "Pratomo Ardianto",
+  "license": "ISC"
+}
