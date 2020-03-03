@@ -2,112 +2,22 @@
 <head>
   <title>Trello Like App</title>
   <link rel="stylesheet" href="css/main.css">
-  <script src="js/main.js"></script>
 </head>
 <body>
   <div class="main-wrapper">
     <div class="search-wrapper">
-      <input type="text" placeholder="Search card(s)..." />
+
+      <!-- Web Component for Searchbar -->
+      <tl-searchbar></tl-searchbar>
+
     </div>
     <div class="columns-wrapper">
 
-      <!-- Column 1 -->
-      <div id="column-1" class="columns">
-        <div class="column-name">Column 1</div>
-        <div class="cards-wrapper">
-
-          <!-- List of cards in column 1 -->
-           <ul class="cards-list">
-
-            <!-- Card 1 in column 1 -->
-             <li class="card-1-column-1 cards">
-               <div class="card-wrapper">
-                 <div class="card-title">
-                   Card 1 title
-                 </div>
-                 <div class="card-content">
-                  Card 1 content
-                </div>
-               </div>
-             </li>
-
-             <!-- Card 2 in column 1 -->
-             <li class="card-2-column-1 cards">
-              <div class="card-wrapper">
-                <div class="card-title">
-                  Card 2 title
-                </div>
-                <div class="card-content">
-                 Card 2 content
-               </div>
-              </div>
-             </li>
-
-           </ul>
-
-        </div>
-
-        <!-- Add card in column 1 -->
-        <button class="add-card" id="add-card-in-column-1">Add card in column 1</button>
-      </div>
-
-      <!-- Column 2 -->
-      <div id="column-2" class="columns">
-        <div class="column-name">Column 2</div>
-        <div class="cards-wrapper">
-          <ul></ul>
-       </div>
-
-       <!-- Add card in column 2 -->
-       <button class="add-card" id="add-card-in-column-2">Add card in column 2</button>
-      </div>
-
-      <!-- Column 3 -->
-      <div id="column-3" class="columns">
-        <div class="column-name">Column 3</div>
-        <div class="cards-wrapper">
-
-          <!-- List of cards in column 3 -->
-          <ul class="cards-list">
-
-            <!-- Card 1 in column 3 -->
-            <li class="card-1-column-2 cards">
-              <div class="card-wrapper">
-                <div class="card-title">
-                  Card 3 title
-                </div>
-                <div class="card-content">
-                 Card 3 content
-               </div>
-              </div>
-            </li>
-
-            <!-- Card 2 in column 3 -->
-            <li class="card-2-column-2 cards">
-             <div class="card-wrapper">
-               <div class="card-title">
-                 Card 4 title
-               </div>
-               <div class="card-content">
-                Card 4 content
-              </div>
-             </div>
-            </li>
-
-          </ul>
-
-       </div>
-
-       <!-- Add card in column 3 -->
-       <button class="add-card" id="add-card-in-column-3">Add card in column 3</button>
-      </div>
-
-      <!-- Add new column -->
-      <div class="columns">
-       <button class="add-column">Add column</button>
-      </div>
+      <!-- Web Component for Columns -->
+      <tl-column></tl-column>
 
     </div>
   </div>
+  <script src="main.js" type="module"></script>
 </body>
 </html>
