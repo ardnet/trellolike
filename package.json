@@ -5,8 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "test",
-    "start": "node index.js"
+    "start": "http-server ."
   },
   "author": "Pratomo Ardianto",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "http-server": "^0.12.1",
+    "stringbuilder": "0.0.11"
+  }
 }
