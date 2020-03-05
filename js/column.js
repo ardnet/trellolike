@@ -9,13 +9,32 @@ class Column extends HTMLElement {
     this.root = this.attachShadow({mode: 'open'});
   }
 
+  static get observedAttributes() {
+    return ['addcol'];
+  }
+
+  set addcol(value) {
+    this.setAttribute('addcol', value);
+  }
+
+  get addcol() {
+    return this.getAttribute('addcol');
+  }
+
+  attributeChangedCallback(name, oldVal, newVal) {
+    console.log('attributeChangedCallback: ' + this.addcol);
+    console.log('attributeChangedCallback: ' + name);
+    console.log('attributeChangedCallback: ' + oldVal);
+    console.log('attributeChangedCallback: ' + newVal);
+  }
+
   connectedCallback() {
     const colTpl = document.getElementById('column-tpl');
 
     getColumn().then((data) => {
       data.forEach(element => {
-        console.log(element);
         const instColTpl = document.importNode(colTpl.content, true);
+
         instColTpl.querySelector('.columns').setAttribute('id', 'column-' + element.id);
         instColTpl.querySelector('.column-title').innerHTML = element.col_title;
         instColTpl.querySelector('.del-col-butt').innerHTML = 'Delete column ' + element.id;

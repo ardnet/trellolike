@@ -6,5 +6,5 @@ window.addEventListener('load', () => {
 });
 
 document.getElementById('add-column').addEventListener('click', (e) => {
-    addCol();
+  document.querySelector('tl-column').addcol = true;
 });
