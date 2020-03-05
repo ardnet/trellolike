@@ -1,0 +1,81 @@
+{
+  "column": [
+    {
+      "id": 1,
+      "col_id": 1,
+      "col_title": "Column Title 1",
+      "col_created_date": "03/03/2020, 10:43:19",
+      "cards": [
+        1,
+        2,
+        3,
+        4
+      ]
+    },
+    {
+      "id": 2,
+      "col_id": 2,
+      "col_title": "Column Title 2",
+      "col_created_date": "03/03/2020, 10:43:19",
+      "cards": [
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "id": 3,
+      "col_id": 3,
+      "col_title": "Column Title 3",
+      "col_created_date": "03/03/2020, 10:43:19",
+      "cards": [
+        9,
+        10,
+        11,
+        12
+      ]
+    },
+    {
+      "col_id": 4,
+      "col_title": "Column Title 4",
+      "col_created_date": "03/03/2020, 18:43:19",
+      "cards": [],
+      "id": 4
+    }
+  ],
+  "card": [
+    {
+      "id": 1,
+      "card_id": 1,
+      "card_title": "Card Title 1",
+      "card_content": "Card Content 1",
+      "card_created_date": "03/03/2020, 10:43:19",
+      "col_id": 1
+    },
+    {
+      "id": 2,
+      "card_id": 2,
+      "card_title": "Card Title 2",
+      "card_content": "Card Content 2",
+      "card_created_date": "03/03/2020, 10:43:19",
+      "col_id": 1
+    },
+    {
+      "id": 3,
+      "card_id": 3,
+      "card_title": "Card Title 3",
+      "card_content": "Card Content 3",
+      "card_created_date": "03/03/2020, 10:43:19",
+      "col_id": 2
+    },
+    {
+      "id": 4,
+      "card_id": 4,
+      "card_title": "Card Title 4",
+      "card_content": "Card Content 4",
+      "card_created_date": "03/03/2020, 10:43:19",
+      "col_id": 2
+    }
+  ]
+}
