@@ -18,9 +18,11 @@ class Column extends HTMLElement {
         const instColTpl = document.importNode(colTpl.content, true);
         instColTpl.querySelector('.columns').setAttribute('id', 'column-' + element.id);
         instColTpl.querySelector('.column-title').innerHTML = element.col_title;
+        instColTpl.querySelector('.del-col-butt').innerHTML = 'Delete column ' + element.id;
 
         instColTpl.querySelector('.add-card-butt').setAttribute('id', 'add-card-in-column-' + element.id);
         instColTpl.querySelector('.add-card-butt').innerHTML = 'Add card in column ' + element.id;
+        instColTpl.querySelector('.del-card-butt').innerHTML = 'Delete card in column ' + element.id;
 
         this.root.appendChild(instColTpl);
       });
