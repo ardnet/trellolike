@@ -1,21 +1,30 @@
+async function getColumn() {
+  const res = await fetch('http://127.0.0.1:3000/column');
+  return await res.json();
+}
+
 class Column extends HTMLElement {
+  constructor() {
+    super();
+    this.root = this.attachShadow({mode: 'open'});
+  }
 
   connectedCallback() {
-    this.innerHTML = `
-      <div id="column-1" class="columns">
-        <div class="column-name">Column 1</div>
-        <button class="add-card" id="add-card-in-column-1">Add card in column 1</button>
-      </div>
-      
-      <div id="column-2" class="columns">
-        <div class="column-name">Column 2</div>
-        <button class="add-card" id="add-card-in-column-2">Add card in column 2</button>
-      </div>
+    const colTpl = document.getElementById('column-tpl');
 
-      <div class="columns">
-       <button class="add-column">Add column</button>
-      </div>
-    `;
+    getColumn().then((data) => {
+      data.forEach(element => {
+        console.log(element);
+        const instColTpl = document.importNode(colTpl.content, true);
+        instColTpl.querySelector('.columns').setAttribute('id', 'column-' + element.id);
+        instColTpl.querySelector('.column-title').innerHTML = element.col_title;
+
+        instColTpl.querySelector('.add-card-butt').setAttribute('id', 'add-card-in-column-' + element.id);
+        instColTpl.querySelector('.add-card-butt').innerHTML = 'Add card in column ' + element.id;
+
+        this.root.appendChild(instColTpl);
+      });
+    });
   }
 }
 

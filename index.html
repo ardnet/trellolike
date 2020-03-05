@@ -16,8 +16,32 @@
       <!-- Web Component for Columns -->
       <tl-column></tl-column>
 
+      <div class="columns">
+        <button id="add-column">Add column</button>
+       </div>
     </div>
   </div>
+
+  <!-- Column Template -->
+  <template id="column-tpl">
+    <style>
+      .columns {
+        border: 1px solid grey;
+        float: left;
+        padding: 10px;
+      }
+    </style>
+
+    <div class="columns">
+      <div class="column-title"></div>
+      <div class="cards-wrapper">
+        <ul></ul>
+     </div>
+      <button class="add-card-butt"></button>
+    </div>
+
+  </template>
+
   <script src="main.js" type="module"></script>
 </body>
 </html>
